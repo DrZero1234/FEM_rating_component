@@ -1,0 +1,125 @@
+
+@font-face {
+    font-family: "Overpass";
+    font-display: swap;
+    font-weight: 400 700;
+    src: url("./fonts/Overpass-VariableFont_wght.ttf")
+}
+
+:root {
+    --title-white: hsl(0, 0%, 100%);
+    --text-grey: hsl(217, 12%, 63%);
+    --background-grey: hsl(216, 12%, 54%);
+    --circe-grey: hsla(217, 12%, 63%,.2);
+    --blue: hsl(213, 19%, 18%);
+    --v-blue: hsl(216, 12%, 8%);
+    --font-normal: 400;
+    --font-bold: 700;
+    --btn-orange: hsl(25, 97%, 53%);
+
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    font-size: 15px;
+    font-family: "Overpass";
+    font-weight: var(--font-normal);
+}
+
+
+
+
+.container {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: var(--v-blue);
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    margin: 2rem;
+    padding: 3rem;
+    max-width: 500px;
+    gap: 1rem;
+    color: var(--text-grey);
+    background-color: var(--blue);
+    line-height: 1.5rem;
+    font-weight: var(--font-normal);
+}
+
+button {
+    border: 0px;
+    border-radius: 100vw;
+    padding: .8rem;
+    min-width: 100%;
+    background-color: var(--btn-orange);
+    color: var(--title-white);
+    font-size: 20px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: var(--title-white);
+    color: var(--btn-orange);
+}
+
+.grid-g {
+    display: grid;
+    gap: 1rem;
+}
+
+h1 {
+    color: var(--title-white);
+}
+
+.grid-g[data-spacing="large"] {
+    gap: 2rem;
+}
+
+.rating {
+    display: flex;
+    gap: 1.5rem;
+    min-width: 100%;
+}
+
+.circle {
+        width: 3em;
+        height: 3em;
+        line-height: 3em;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        font-weight: var(--font-bold);
+        background-color: var(--circe-grey);
+        text-align: center;
+        display: block;   
+}
+
+.circle:hover {
+    cursor: pointer;
+    background-color: var(--btn-orange);
+    color: var(--title-white);
+}
+
+.active {
+    background-color: var(--background-grey);
+    color: var(--title-white);
+}
+
+
+@media (max-width: 500px) {
+    button {
+        padding: 1.2rem;
+    }
+}
