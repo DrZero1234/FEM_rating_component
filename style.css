@@ -36,6 +36,11 @@ body {
 }
 
 
+.inactive {
+    display: none !important;   
+}
+
+
 
 
 .container {
@@ -45,12 +50,13 @@ body {
     background-color: var(--v-blue);
 }
 
-.content-wrapper {
+.rating-wrapper,
+.thanks-wrapper {
     display: flex;
     flex-direction: column;
     border: 2px solid black;
     margin: 2rem;
-    padding: 3rem;
+    padding: 2rem;
     max-width: 500px;
     gap: 1rem;
     color: var(--text-grey);
@@ -58,6 +64,22 @@ body {
     line-height: 1.5rem;
     font-weight: var(--font-normal);
 }
+
+.thanks-wrapper {
+    align-items: center;
+    text-align: center;
+    gap: 1.5; 
+}
+
+
+.user-select {
+        color: var(--btn-orange);
+        padding: .5rem 2rem;
+        border-radius: 100vw;
+        background-color: var(--circe-grey);
+}
+
+
 
 button {
     border: 0px;
@@ -86,6 +108,10 @@ h1 {
 
 .grid-g[data-spacing="large"] {
     gap: 2rem;
+}
+
+.grid-g[data-spacing="extra-large"] {
+    gap: 3rem;
 }
 
 .rating {
